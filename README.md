@@ -1,4 +1,4 @@
-# Getting Started
+# Project Description
 
 A Python wrapper for `yahoo_finance` and `get_all_tickers`. Using 
 `yahoo_finance` one can easily fetch historical data for different companies 
@@ -35,9 +35,9 @@ trading day.
 
 The compiled historical data is then saved into a csv named `stock_data.csv`.
 
-# Getting Started
+# Installation
 
-To install `financeum` use:
+Install with `pip`:
 
 ```sh
 pip install financeum
@@ -87,3 +87,6 @@ financeum = Financeum(start_date, end_date)
 # Get stock data
 stock_data = financeum.get_data()
 ```
+
+# Contributors
+* **Frank Ceballos** - [GitHub](https://github.com/frank-ceballos)
