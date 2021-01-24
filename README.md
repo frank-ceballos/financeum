@@ -1,9 +1,12 @@
+![Drag Racing](Assets/logo.jpeg)
+
 # Project Description
 
-Financeum is a simple to use pacakge for collecing large amounts of historical
+Financeum is a simple to use package for collecing large amounts of historical
 financial data.
 
-Provides
+Provides:
+
   1. An easy way to collect and download historical financial data for 1000s 
   of companies.
 
