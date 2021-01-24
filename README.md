@@ -89,14 +89,24 @@ start_date = datetime.datetime(2017, 1, 1) # Year, Month, Day
 end_date   = date.today() - timedelta(days=1)
 
 # Initiate an instance of Financeum
-financeum = Financeum(start_date, end_date)
+financeum = Financeum(start_date, end_date, ticker_labels=ticker_labels)
 
 # Get stock data
 stock_data = financeum.get_data()
 ```
 
 There is nothing special here, we are simply using the `yahoo_finance` in the
-backend to do this. 
+backend to do this.
+
+Here are the first few columns of `stock_data`
+
+```
+Date         AAPL Adj Close  AAPL Close   AAPL High    AAPL Low   AAPL Open  AAPL Volume 
+2017-01-03   27.500973       29.037500     29.082500   28.690001  28.950001  1151276000      
+2017-01-04   27.470192       29.004999     29.127501   28.937500  28.962500  84472400.0      
+2017-01-05   27.609884       29.152500     29.215000   28.952499  28.980000   887744000      
+2017-01-06   27.917688       29.477501     29.540001   29.117500  29.195000  1270076000      
+```
 
 # License
 [MIT](LICENSES/MIT.txt)
