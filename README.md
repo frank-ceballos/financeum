@@ -1,21 +1,17 @@
 # Project Description
 
-A Python wrapper for `yahoo_finance` and `get_all_tickers`. With 
-`yahoo_finance` one can easily fetch historical data for different companies 
-by providing there ticker labels. However, `yahoo_finance` does not offer an
-easy way to retrieve data for a large number of companies. 
+Financeum is a simple to use pacakge for collecing large amounts of historical
+financial data.
 
-To extract data for 1000s of companies you will need to scrape the web or 
-compile a list manually. This problem is partially solved by `get_all_tickers`,
-a Python package that allows you extract the tickers from publically
-traded stocks. The stock tickers are from the NYSE, NASDAG, and AMEX. It is
-important to note that NASDAQ implements anti-scraping features and as a result
-`get_all_tickers` no longer works in Google Colab.
+Provides
+  1. An easy way to collect and download historical financial data for 1000s 
+  of companies.
 
-Financeum uses `get_all_tickers` to extract the ticker labels from different 
-American exchanges and `yahoo_finance` to retrieve historical data for each
-ticker. For each ticker provided to `yahoo_finance`, the following fields
-are return:
+Financeum is a Python wrapper that is built on top of `yahoo_finance` and
+`get_all_tickers`.  Financeum uses `get_all_tickers` to extract the ticker
+labels from different American exchanges and `yahoo_finance` to retrieve 
+historical data for each ticker. For each ticker provided to `yahoo_finance`, 
+the following fields are return:
 
 * **Open**: The price of the first trade on the given trading day.
 
@@ -33,7 +29,9 @@ trading day.
   distributions. Volume: The number of shares traded for the given
   trading day.
 
-The compiled historical data is then saved into a csv named `stock_data.csv`.
+The compiled historical data is then return as a pandas dataframe and saved 
+into a csv file named `stock_data.csv`.
+
 
 # Installation
 
@@ -43,7 +41,7 @@ Install with `pip`:
 pip install financeum
 ```
 
-# Examples
+# Documentation
 
 ## Fetch Data for +6000 Companies
 
@@ -65,6 +63,10 @@ financeum = Financeum(start_date, end_date)
 # Get stock data
 stock_data = financeum.get_data()
 ```
+
+In the above script, the `start_date` and `end_date` are `datetime.datetime` 
+objects and are required parameters. After the data is downloaded is saved
+into a csv file and pandas dataframe is returned.
 
 ## Fetch Data Custom List of Tickers
 
@@ -89,6 +91,12 @@ financeum = Financeum(start_date, end_date)
 # Get stock data
 stock_data = financeum.get_data()
 ```
+
+There is nothing special here, we are simply using the `yahoo_finance` in the
+backend to do this. 
+
+# License
+[MIT](LICENSES/MIT.txt)
 
 # Contributors
 * **Frank Ceballos** - [GitHub](https://github.com/frank-ceballos)

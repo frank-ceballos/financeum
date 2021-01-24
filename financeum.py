@@ -85,7 +85,7 @@ class Financeum:
     financeum = Financeum(start_date, end_date)
     
     # Get stock data
-    financeum.get_data()
+    stock_data = financeum.get_data()
     
     
     Attributes
