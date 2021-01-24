@@ -130,3 +130,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Ignore stock_data.csv
+stock_data.csv
+test.py
