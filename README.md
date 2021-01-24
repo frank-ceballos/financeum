@@ -69,7 +69,8 @@ stock_data = financeum.get_data()
 
 In the above script, the `start_date` and `end_date` are `datetime.datetime` 
 objects and are required parameters. After the data is downloaded is saved
-into a csv file and pandas dataframe is returned.
+into a csv file and pandas dataframe is returned. The indices of the pandas
+dataframe are the dates. 
 
 ## Fetch Data Custom List of Tickers
 
@@ -101,11 +102,11 @@ backend to do this.
 Here are the first few columns of `stock_data`
 
 ```
-Date         AAPL Adj Close  AAPL Close   AAPL High    AAPL Low   AAPL Open  AAPL Volume 
-2017-01-03   27.500973       29.037500     29.082500   28.690001  28.950001  1151276000      
-2017-01-04   27.470192       29.004999     29.127501   28.937500  28.962500  84472400.0      
-2017-01-05   27.609884       29.152500     29.215000   28.952499  28.980000   887744000      
-2017-01-06   27.917688       29.477501     29.540001   29.117500  29.195000  1270076000      
+Date         AAPL Adj Close  AAPL Close  AAPL High   AAPL Low   AAPL Open  AAPL Volume 
+2017-01-03   27.500973       29.037500    29.082500  28.690001  28.950001  1151276000      
+2017-01-04   27.470192       29.004999    29.127501  28.937500  28.962500  84472400     
+2017-01-05   27.609884       29.152500    29.215000  28.952499  28.980000  887744000      
+2017-01-06   27.917688       29.477501    29.540001  29.117500  29.195000  1270076000      
 ```
 
 # License
