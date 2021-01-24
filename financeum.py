@@ -74,6 +74,8 @@ class Financeum:
     # Import packages
     import datetime
     from datetime import date, timedelta
+    from financeum import Financeum
+
     
     # Define start and end date for the data
     start_date = datetime.datetime(2017, 1, 1) # Year, Month, Day

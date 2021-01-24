@@ -1,6 +1,6 @@
 # Project Description
 
-A Python wrapper for `yahoo_finance` and `get_all_tickers`. Using 
+A Python wrapper for `yahoo_finance` and `get_all_tickers`. With 
 `yahoo_finance` one can easily fetch historical data for different companies 
 by providing there ticker labels. However, `yahoo_finance` does not offer an
 easy way to retrieve data for a large number of companies. 
@@ -53,6 +53,7 @@ To fetch data for +6000 companies using financeum use the following script.
 # Import packages
 import datetime
 from datetime import date, timedelta
+from financeum import Financeum
 
 # Define start and end date for the data
 start_date = datetime.datetime(2017, 1, 1) # Year, Month, Day
@@ -73,6 +74,7 @@ To fetch historical financial data for Apple, Google, and Tesla use:
 # Import packages
 import datetime
 from datetime import date, timedelta
+from financeum import Financeum
 
 # Define ticker labels
 ticker_labels = ['AAPL', 'GOOG', 'TSLA']
