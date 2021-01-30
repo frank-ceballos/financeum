@@ -33,8 +33,16 @@ trading day.
   trading day.
 
 The compiled historical data is then return as a pandas dataframe and saved 
-into a csv file named `stock_data.csv`.
+into a csv file named `stock_data.csv`. Each column has the ticker label as
+a prefix. For example, the columns corresponding for `AAPL` will be labeled as:
 
+```
+AAPL Open
+AAPL High
+AAPL Low
+AAPL Close
+AAPL Adj Close
+```
 
 # Installation
 
