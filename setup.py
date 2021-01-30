@@ -2,6 +2,7 @@ from setuptools import setup
 
 setup(
     name='financeum',
+    packages = ['financeum'],
     version='0.1.0',    
     description='A Python package retrieve historical financial data.',
     url='https://github.com/frank-ceballos/financeum',
