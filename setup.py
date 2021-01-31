@@ -9,6 +9,7 @@ setup(
     version='0.2.4',    
     description='A Python package retrieve historical financial data.',
     long_description=long_description,
+    long_description_content_type="text/markdown",
     url='https://github.com/frank-ceballos/financeum',
     author='Frank Ceballos',
     author_email='frank.ceballos123@gmail.com',
